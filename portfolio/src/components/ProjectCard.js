@@ -1,5 +1,5 @@
 import React from 'react';
-import { Typography, Card, CardActionArea, CardMedia, CardContent } from '@mui/icons-material';
+import { Typography, Card, CardActionArea, CardMedia, CardContent } from '@mui/material';
 import { useNavigate } from 'react-router-dom';
 
 const ProjectCard = ({ id, image, name, summary }) => {

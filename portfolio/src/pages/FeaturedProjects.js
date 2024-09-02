@@ -17,7 +17,7 @@ const Projects = () => {
                 backgroundImage: `url(${backgroundImg})`,
                 backgroundSize: 'cover',
                 backgroundPosition: 'center',
-                height: '40vh',
+                height: '30vh',
                 display: 'flex',
                 flexDirection: 'column', // Stack items vertically
                 alignItems: 'center',
@@ -28,19 +28,17 @@ const Projects = () => {
               <Typography variant="h2" gutterBottom>
                   Projects
               </Typography>
-              <Box sx={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center', width: '90vw'}}>
-                  <Typography variant="h4">
-                      Featured Projects
-                  </Typography>
-                  <Button variant="contained" color="primary" onClick={() => {navigate("/elle-portfolio/AllProjects")}}>
-                      View All
-                  </Button>
-              </Box>
             </Box>
-            
-            
         </Box>
         <Box sx={{paddingLeft: 4, paddingRight: 4, paddingTop: 1, paddingBottom: 2}}>
+          <Box sx={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center', width: '90vw', paddingBottom: 3}}>
+            <Typography variant="h4">
+              Featured Projects
+            </Typography>
+            <Button variant="contained" color="primary" onClick={() => {navigate("/elle-portfolio/AllProjects")}}>
+              View All
+            </Button>
+          </Box>
           <Grid2 container spacing={6}>
             {featured.map((project, index) => (
               <Grid2 item size={{xs: 10, sm: 4, md: 6}} key={index}>

@@ -14,19 +14,34 @@ const Navbar = () => {
     return (
       <Box>
         <AppBar position="absolute" sx={{ backgroundColor: 'transparent', boxShadow: 'none' }}>
-          <Toolbar sx={{ display: 'flex'}}>
-            <IconButton dge="start" color="inherit" aria-label="menu" onClick={handleLogoClick} sx={{ marginRight: 'auto' }}>
+          <Toolbar sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center'}}>
+            <IconButton edge="start" color="inherit" aria-label="menu" onClick={handleLogoClick} sx={{ 
+              marginRight: 'auto',
+              p: 0, // Remove padding to avoid extra space around the icon
+              '&:hover': {
+                backgroundColor: 'transparent', // Remove the hover background
+              },
+              '&:focus': {
+                outline: 'none', // Remove the focus outline
+              },
+              '&:active': {
+                backgroundColor: 'transparent', // Remove the click overlay background
+              },
+              '& .MuiTouchRipple-root': {
+                display: 'none', // Remove the ripple effect
+              },
+            }}>
               <img src={monogram} alt="Logo" style={{ width: '60px', height: '60px' }} />
             </IconButton>
             <Collapse in={open} sx={{ flexGrow: 1, height: '60px'}}>
               <Box sx={{ display: 'flex', justifyContent: 'center', gap: 2 }}>
-                  <Link to="/" style={{ textDecoration: 'none', color: 'inherit' }}>
+                  <Link to="/" style={{ textDecoration: 'none', color: 'inherit' }} onClick={handleLogoClick}>
                       <Typography variant="h6">Home</Typography>
                   </Link>
-                  <Link to="/elle-portfolio/projects" style={{ textDecoration: 'none', color: 'inherit' }}>
+                  <Link to="/elle-portfolio/projects" style={{ textDecoration: 'none', color: 'inherit' }} onClick={handleLogoClick}>
                       <Typography variant="h6">Projects</Typography>
                   </Link>
-                  <Link to="/elle-portfolio/experience" style={{ textDecoration: 'none', color: 'inherit' }}>
+                  <Link to="/elle-portfolio/experience" style={{ textDecoration: 'none', color: 'inherit' }} onClick={handleLogoClick}>
                       <Typography variant="h6">Experience</Typography>
                   </Link>
               </Box>
