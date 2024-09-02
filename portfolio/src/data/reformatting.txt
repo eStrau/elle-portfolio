@@ -1,0 +1,15 @@
+{
+    name: '',
+    projectOverview: '',
+    languages: '',
+    toolLibraries: '',
+    dateCreated: '',
+    dateCompleted: '',
+    linkTo: '',
+    role: '',
+    takeaways: '',
+    description: '',
+    images: {
+        
+    }
+}
