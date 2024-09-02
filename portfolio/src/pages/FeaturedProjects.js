@@ -1,7 +1,7 @@
 import React from 'react';
 import { Box, Typography, Button, Grid2 } from '@mui/material';
 import { useNavigate } from 'react-router-dom';
-import { ProjectData } from '../data/ProjectData';
+import { ProjectData } from '../data/ProjectData2';
 import backgroundImg from '../images/backgroundImage.jpg';
 
 import ProjectCard from '../components/ProjectCard';
@@ -43,9 +43,9 @@ const Projects = () => {
             {featured.map((project, index) => (
               <Grid2 item size={{xs: 10, sm: 4, md: 6}} key={index}>
                 <ProjectCard
-                  image={project.image}
+                  image={project.images[0]}
                   name={project.name}
-                  summary={project.summary}
+                  summary={project.projectOverview}
                   id={index}
                 />
               </Grid2>
