@@ -46,6 +46,8 @@ const Projects = () => {
                   image={project.images[0]}
                   name={project.name}
                   summary={project.projectOverview}
+                  languages={project.languages}
+                  tools={project.toolLibraries}
                   id={index}
                 />
               </Grid2>
