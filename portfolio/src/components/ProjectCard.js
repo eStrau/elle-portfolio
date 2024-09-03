@@ -37,7 +37,7 @@ const ProjectCard = ({ id, image, name, summary }) => {
           </CardContent>
         </CardActionArea>
         <CardContent>
-          <Typography gutterBottom variant="h5" component="div">
+          <Typography gutterBottom variant="h6" component="div">
             {name}
           </Typography>
         </CardContent>
