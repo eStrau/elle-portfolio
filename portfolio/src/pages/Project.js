@@ -1,7 +1,7 @@
 import React from 'react'
 // useful when associating with specific users and will cause a display for that person
 // useParams gets the specific url for the website to go to
-import { Box, Button, Container, Grid2, Typography } from '@mui/material';
+import { Box, Button, Container, Grid2, Typography, Chip } from '@mui/material';
 import { useParams, useNavigate } from 'react-router-dom';
 import ImageCarousel from '../components/ImageCarousel';
 
@@ -66,9 +66,9 @@ const Project = () => {
                     <Typography sx={{fontSize: 18}}>
                       Tools / Libraries / Software:
                     </Typography>
-                    <Typography>
-                      {project.toolLibraries}
-                    </Typography>
+                    <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 1, justifyContent: 'center' }}>
+                      {project.toolLibraries.map((tool, index) => <Chip key={index} label={tool} color='primary' sx={{ margin: 0.5 }}/>)}
+                    </Box>
                     <Typography sx={{fontSize: 18}}>
                       Created On:
                     </Typography>
