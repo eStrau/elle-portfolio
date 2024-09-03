@@ -1,7 +1,8 @@
 import React from 'react'
 // useful when associating with specific users and will cause a display for that person
 // useParams gets the specific url for the website to go to
-import { Box, Button, Container, Grid2, Typography, Chip } from '@mui/material';
+import { Box, Button, Container, Grid2, Typography, Chip, IconButton } from '@mui/material';
+import { ArrowBackIos } from '@mui/icons-material';
 import { useParams, useNavigate } from 'react-router-dom';
 import ImageCarousel from '../components/ImageCarousel';
 
@@ -29,17 +30,25 @@ const Project = () => {
       > 
         <Box sx={{paddingTop: 8, textAlign: 'center'}}>
           <Typography variant="h3" gutterBottom>
+            Projects
+          </Typography>
+        </Box>
+        <Box sx={{ display: 'flex', justifyContent: 'flex-start'}}>
+          <IconButton onClick={() => navigate('/elle-portfolio/allprojects')}>
+            <ArrowBackIos />
+            <Typography>
+              All Projects
+            </Typography>
+          </IconButton>
+        </Box>
+      </Box>
+      {/* PROJECT INFORMATION & DETAILS */}
+      <Box sx={{padding: 2, backgroundColor: '#F5F3EE'}}>
+        <Box sx={{ textAlign: 'center'}}>
+          <Typography variant="h3" gutterBottom>
             {project.name}
           </Typography>
         </Box>
-        <Box sx={{ display: 'flex', justifyContent: 'flex-start', padding: 1 }}>
-          <Button variant="contained" sx={{ fontSize: 10 }} onClick={() => {navigate("/elle-portfolio/AllProjects")}}>
-            Back to All Projects
-          </Button>
-        </Box>
-        
-      </Box>
-      <Box sx={{padding: 2, backgroundColor: '#F5F3EE'}}>
         <Container>
           <Grid2 container spacing={8}>
             <Grid2 size={{xs: 12, md: 8}} >
@@ -50,31 +59,37 @@ const Project = () => {
                 </Box>
               </Box>
             </Grid2>
-            <Grid2 size={{xs: 12, md: 4}}>
-              <Box sx={{backgroundColor: '#B88E99', padding: 2, display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center'}}>
-                <Typography sx={{textAlign: 'center', fontSize: 20, color: 'white'}}>
+            <Grid2 size={{ xs: 12, md: 4 }}>
+              <Box sx={{ backgroundColor: '#B88E99', padding: 2, display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', textAlign: 'center' }}>
+                <Typography sx={{ textAlign: 'center', fontSize: 20, color: 'white', paddingBottom: 1 }}>
                       Project Info
                 </Typography>
                 <Box sx={{ backgroundColor: '#040926', color: 'white'}}>
-                  <Box sx={{padding: 2}}>
+                  <Box sx={{padding: 1}}>
                     <Typography sx={{fontSize: 18}}>
                       Language(s):
                     </Typography>
-                    <Typography>
-                      {project.languages}
-                    </Typography>
+                    <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 1, justifyContent: 'center' }}>
+                      {project.languages.map((lang, index) => <Chip key={index} label={lang} color='primary' sx={{ margin: 0.5 }}/>)}
+                    </Box>
+                  </Box>
+                  <Box sx={{padding: 1}}>
                     <Typography sx={{fontSize: 18}}>
-                      Tools / Libraries / Software:
+                      Tools, Libraries, and Softwares:
                     </Typography>
                     <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 1, justifyContent: 'center' }}>
                       {project.toolLibraries.map((tool, index) => <Chip key={index} label={tool} color='primary' sx={{ margin: 0.5 }}/>)}
                     </Box>
+                  </Box>
+                  <Box sx={{padding: 1}}>
                     <Typography sx={{fontSize: 18}}>
                       Created On:
                     </Typography>
                     <Typography>
                       {project.dateCreated}
                     </Typography>
+                  </Box>
+                  <Box sx={{padding: 1}}>
                     <Typography sx={{fontSize: 18}}>
                       Completed On:
                     </Typography>

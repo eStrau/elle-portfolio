@@ -1,5 +1,6 @@
 import React from 'react';
-import { Box, Typography, Button, Grid2 } from '@mui/material';
+import { Box, Typography, IconButton, Grid2 } from '@mui/material';
+import { ArrowForwardIos } from '@mui/icons-material';
 import { useNavigate } from 'react-router-dom';
 import { ProjectData } from '../data/ProjectData2';
 import backgroundImg from '../images/backgroundImage.jpg';
@@ -35,9 +36,12 @@ const Projects = () => {
             <Typography variant="h4">
               Featured Projects
             </Typography>
-            <Button variant="contained" color="primary" onClick={() => {navigate("/elle-portfolio/AllProjects")}}>
-              View All
-            </Button>
+            <IconButton onClick={() => navigate('/elle-portfolio/allprojects')}>
+              <Typography>
+                All Projects
+              </Typography>
+              <ArrowForwardIos />
+            </IconButton>
           </Box>
           <Grid2 container spacing={6}>
             {featured.map((project, index) => (

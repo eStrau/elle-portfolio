@@ -40,9 +40,9 @@ const ProjectCard = ({ id, image, name, summary, languages, tools }) => {
             <Typography variant="body2" component="p">
               {summary}
             </Typography>
-            <Typography variant="body2" component="p" sx={{ padding: 1 }}>
-              {languages}
-            </Typography>
+            <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 1, justifyContent: 'center', paddingTop: 1 }}>
+              {languages.map((lang, index) => <Chip key={index} label={lang} color='primary' sx={{ margin: 0.5 }}/>)}
+            </Box>
             <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 1, justifyContent: 'center' }}>
               {tools.map((tool, index) => <Chip key={index} label={tool} color='primary' sx={{ margin: 0.5 }}/>)}
             </Box>

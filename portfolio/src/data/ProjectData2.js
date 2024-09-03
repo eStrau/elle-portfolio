@@ -19,7 +19,7 @@ export const ProjectData = [
     {
         name: 'Team Tech: CACI Satellite Schedule & Visualizer 23-24',
         projectOverview: 'Society of Women Engineer\'s Team Tech Project, which focused on improving last year\'s satellite schedule by adding new features for filtering and visualizing. The team consisted of 5 subteams: an aerospace, 2 backend, and 2 frontend teams, who all collaborated to build the project.',
-        languages: 'C++ / JavaScript / React.js',
+        languages: ['C++', 'JavaScript', 'React.js'],
         toolLibraries: ['MongoDB', 'Node.js', 'Leaflet.js', 'Material UI'],
         dateCreated: 'September 2023',
         dateCompleted: 'April 2024',
@@ -32,7 +32,7 @@ export const ProjectData = [
     {
         name: 'Team Tech: CACI Satellite Schedule 22-23',
         projectOverview: '',
-        languages: 'C++ / JavaScript / React.js',
+        languages: ['C++', 'JavaScript', 'React.js'],
         toolLibraries: [],
         dateCreated: 'September 2022',
         dateCompleted: 'April 2023',
@@ -47,7 +47,7 @@ export const ProjectData = [
     {
         name: 'Raise the Bar',
         projectOverview: '',
-        languages: 'JavaScript',
+        languages: ['JavaScript'],
         toolLibraries: ['MongoDB', 'Node.js', 'Express.js', 'React.js', 'Material UI', 'Figma', 'Jira'],
         dateCreated: 'January 2024',
         dateCompleted: 'April 2024',
@@ -62,7 +62,7 @@ export const ProjectData = [
     {
         name: 'InDepth',
         projectOverview: '',
-        languages: 'R',
+        languages: ['R'],
         toolLibraries: ['LaTex', ''],
         dateCreated: 'March 2024',
         dateCompleted: 'April 2024',
@@ -75,9 +75,9 @@ export const ProjectData = [
         ]
     },
     {
-        name: 'mocha',
+        name: 'plc++',
         projectOverview: '',
-        languages: 'Java',
+        languages: ['Java'],
         toolLibraries: ['JUnit'],
         dateCreated: 'January 2024',
         dateCompleted: 'April 2024',
@@ -92,7 +92,7 @@ export const ProjectData = [
     {
         name: 'Where in the World?',
         projectOverview: '',
-        languages: 'C++',
+        languages: ['C++'],
         toolLibraries: ['SMFL'],
         dateCreated: 'December 2023',
         dateCompleted: 'December 2023',
@@ -107,7 +107,7 @@ export const ProjectData = [
     {
         name: 'Breaking Down Bias',
         projectOverview: '',
-        languages: 'Python',
+        languages: ['Python'],
         toolLibraries: ['Pandas', 'Typi'],
         dateCreated: 'April 2024',
         dateCompleted: 'April 2024',
@@ -122,7 +122,7 @@ export const ProjectData = [
     {
         name: 'Minesweeper',
         projectOverview: '',
-        languages: 'C++',
+        languages: ['C++'],
         toolLibraries: ['SFML'],
         dateCreated: 'November 2022',
         dateCompleted: 'December 2022',
@@ -137,8 +137,8 @@ export const ProjectData = [
     {
         name: 'UKG: Login UI Work',
         projectOverview: '',
-        languages: 'Java / Angular / Ruby / ',
-        toolLibraries: ['Postman', 'Docker', 'Jira', 'Bootstrap', 'OpenAM', 'Kubernetes'],
+        languages: ['Java', 'Angular', 'HMTL/CSS', 'Ruby'],
+        toolLibraries: ['Postman', 'Docker', 'Jira', 'Bootstrap', 'OpenAM', 'Kubernetes', 'Maven'],
         dateCreated: 'May 2024',
         dateCompleted: 'August 2024',
         linkTo: '',
