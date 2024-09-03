@@ -1,4 +1,5 @@
 // importing image paths
+// Team Tech 2023-2024 Images
 import teamTech23Image1 from '../images/projects/teamTech23/teamTechAustinExample1.jpg';
 import teamTech23Image2 from '../images/projects/teamTech23/teamTechAustinExample2.jpg';
 import teamTech23Image3 from '../images/projects/teamTech23/teamTechAustinExample3.jpg';
@@ -13,6 +14,38 @@ import teamTech23Image11 from '../images/projects/teamTech23/teamTechMapSatellit
 import teamTech23Image12 from '../images/projects/teamTech23/teamTechMapSearchByDate.jpg';
 import teamTech23Image13 from '../images/projects/teamTech23/teamTechMapSelectSatellite.jpg';
 
+// Team Tech 2022-2023 Images
+import teamTech22Image1 from '../images/projects/teamTech22.png';
+
+// Minesweeper Images
+import minesweeper from '../images/projects/minesweeper.jpg';
+
+// inDepth Images
+import inDepthImage1 from '../images/projects/inDepth/InDepthLogo.png';
+import inDepthImage2 from '../images/projects/inDepth/uploadAttendance.jpg';
+import inDepthImage3 from '../images/projects/inDepth/eventDemoChar.jpg';
+import inDepthImage4 from '../images/projects/inDepth/eventDemoMajor.jpg';
+import inDepthImage5 from '../images/projects/inDepth/eventDemoYear.jpg';
+import inDepthImage6 from '../images/projects/inDepth/topMembers.jpg';
+
+// Breaking Down Bias Images
+import breakingDownBiasImage1 from '../images/projects/breakingDownBias/Breaking.png';
+import breakingDownBiasImage2 from '../images/projects/breakingDownBias/comparator.png';
+import breakingDownBiasImage3 from '../images/projects/breakingDownBias/worldmap.png';
+
+// Raise the Bar Images
+import raiseTheBarImage1 from '../images/projects/raiseTheBar/loginScreen.jpg';
+import raiseTheBarImage2 from '../images/projects/raiseTheBar/signupScreen.jpg';
+import raiseTheBarImage4 from '../images/projects/raiseTheBar/chatScreen.jpg';
+import raiseTheBarImage3 from '../images/projects/raiseTheBar/homeScreen.jpg';
+import raiseTheBarImage5 from '../images/projects/raiseTheBar/completedScreen.jpg';
+import raiseTheBarImage6 from '../images/projects/raiseTheBar/copyingScreen.jpg';
+import raiseTheBarImage7 from '../images/projects/raiseTheBar/progressScreen.jpg';
+import raiseTheBarImage8 from '../images/projects/raiseTheBar/progressScreen2.jpg';
+import raiseTheBarImage9 from '../images/projects/raiseTheBar/profileScreen.jpg';
+
+// under construction
+import underConstruction from '../images/projects/pageUnderConstruction.png'
 
 // data
 export const ProjectData = [
@@ -40,9 +73,7 @@ export const ProjectData = [
         role: '',
         takeaways: '',
         description: '',
-        images: [
-            
-        ]
+        images: [teamTech22Image1]
     },
     {
         name: 'Raise the Bar',
@@ -51,13 +82,11 @@ export const ProjectData = [
         toolLibraries: ['MongoDB', 'Node.js', 'Express.js', 'React.js', 'Material UI', 'Figma', 'Jira'],
         dateCreated: 'January 2024',
         dateCompleted: 'April 2024',
-        linkTo: '',
+        linkTo: 'https://github.com/ThomasOli/WorkoutAI-Assistant',
         role: '',
         takeaways: '',
-        description: '',
-        images: [
-
-        ]
+        description: 'Raise the Bar is web-based training application that uses generative AI to provide users with immediate, customizable workout routines depending on their specifications. Raise the Bar distinguishes itself from other workout applications by including an interactive user interface that enables users to check off exercises as they are completed, different routines catered to users depending on how often they expect to work out, and a user profile that tracks workout progress. This all comes together to create a satisfying workout experience for gym enthusiasts, who will no longer endlessly search through sources to find desirable exercise routines, and no longer need to use non-digital, inefficient means to try and keep track of their workout progression. Our project provides value to the marketplace by introducing an intuitive, helpful, AI assistant to aid gym enthusiasts and newcomers alike in curating bespoke workout routines. It modernizes fitness tracking by innovating a streamlined approach to planning, tracking, tabulating, and checking off workouts. With this constant stream of fitness information at gym goers’ disposal, they will be incentivized to follow through with their fitness plans and keep on top of their health and wellness.',
+        images: [raiseTheBarImage1, raiseTheBarImage2, raiseTheBarImage3, raiseTheBarImage4, raiseTheBarImage5, raiseTheBarImage6, raiseTheBarImage7, raiseTheBarImage8, raiseTheBarImage9]
     },
     {
         name: 'InDepth',
@@ -66,13 +95,11 @@ export const ProjectData = [
         toolLibraries: ['LaTex', ''],
         dateCreated: 'March 2024',
         dateCompleted: 'April 2024',
-        linkTo: '',
+        linkTo: 'https://github.com/ananyasista/InDepth',
         role: '',
         takeaways: '',
         description: '',
-        images: [
-
-        ]
+        images: [inDepthImage1, inDepthImage2, inDepthImage3, inDepthImage4, inDepthImage5, inDepthImage6]
     },
     {
         name: 'plc++',
@@ -81,13 +108,11 @@ export const ProjectData = [
         toolLibraries: ['JUnit'],
         dateCreated: 'January 2024',
         dateCompleted: 'April 2024',
-        linkTo: '',
+        linkTo: 'https://github.com/ananyasista/PLC_Project',
         role: '',
         takeaways: '',
         description: '',
-        images: [
-
-        ]
+        images: [underConstruction]
     },
     {
         name: 'Where in the World?',
@@ -96,28 +121,24 @@ export const ProjectData = [
         toolLibraries: ['SMFL'],
         dateCreated: 'December 2023',
         dateCompleted: 'December 2023',
-        linkTo: '',
+        linkTo: 'https://github.com/ananyasista/WhereIntheWorld',
         role: '',
         takeaways: '',
         description: '',
-        images: [
-
-        ]
+        images: [underConstruction]
     },
     {
         name: 'Breaking Down Bias',
-        projectOverview: '',
+        projectOverview: 'My WiNGHacks project, where my partner Devika and I wanted to push ourselves outside our comfort zone while also refreshing our python skills by using Taipy. Breaking Down Bias offers an exploration of gender bias through data visualizations to empower users to understand and address societal inequalities and biases.',
         languages: ['Python'],
-        toolLibraries: ['Pandas', 'Typi'],
-        dateCreated: 'April 2024',
-        dateCompleted: 'April 2024',
-        linkTo: '',
-        role: '',
-        takeaways: '',
-        description: '',
-        images: [
-
-        ]
+        toolLibraries: ['Pandas', 'Taipy', 'Numpy', 'Markdown'],
+        dateCreated: 'April 5th, 2024',
+        dateCompleted: 'April 7th, 2024',
+        linkTo: 'https://github.com/dvkeia/BreakingDownBias',
+        role: 'We built Breaking Down Bias with Taipy and Python, leveraging pandas for seamless data management and Taipy for easy to create dashboards with data visualization. We transformed the Excel sheets from 2023 Gender Social Norms Index Report into CSV files, reforming the sheets to only include the tables of data without any merged cells or unnecessary cells to make it easy to read through pandas. We used markdown to format the pages and display the graphs and information.',
+        takeaways: 'This was an amazing learning experience, especially with understanding how to do data visualization. We learned how to use Taipy and pandas in python, which was a lot of fun getting to play with the code to change the data we used. Planning things out is wonderful, at the end of Friday, we set a plan in motion which definitely helped keep us on track for our Saturday time of coding and completing the project. We learned how read through documentation and reference resources that Taipy provide to develop our dashboard. We tried out deployment for the first time, took awhile but cool to see how it looks. We learned how to deploy on Microsoft Azure using CLI and Taipy Cloud using their machines.',
+        description: 'This my project from participating in WiNGHacks, where I partnered with Devika and we decided to try something new by using Taipy. Breaking Down Bias has three main features (Country Comparator, World View, and World Map) for the user to interact with and our home screen, which explains the importance of the topic and a quick break down of the categories studied. With the Country Comparator feature, users can compare the impact of bias between two different nations, gaining insights into the unique challenges each country faces. Breaking Down Bias sheds light on the disparities affecting communities worldwide. Delve deeper with the World View feature, where we dissect the four dimensions of bias (political, physical, educational, and economic) and illustrate how each gender perceives them. Through interactive charts and analysis, users gain a comprehensive understanding of the nuanced layers of societal prejudice and how even women themselves can hold these biases. Navigate the landscape of bias with ease using the World Map function, allowing users to filter and visualize bias percentages across the globe. The filter feature enable us to observe closely the percentages of bias, whether it no bias, at least one bias in the dimension, or specific dimension bias.',
+        images: [breakingDownBiasImage1, breakingDownBiasImage2, breakingDownBiasImage3]
     },
     {
         name: 'Minesweeper',
@@ -130,9 +151,7 @@ export const ProjectData = [
         role: '',
         takeaways: '',
         description: '',
-        images: [
-
-        ]
+        images: [minesweeper]
     },
     {
         name: 'UKG: Login UI Work',
@@ -145,8 +164,6 @@ export const ProjectData = [
         role: '',
         takeaways: '',
         description: '',
-        images: [
-
-        ]
+        images: [underConstruction]
     }
 ]
