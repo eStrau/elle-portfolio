@@ -1,8 +1,8 @@
 import React from 'react';
-import { Typography, Card, CardActionArea, CardMedia, CardContent } from '@mui/material';
+import { Typography, Card, CardActionArea, CardMedia, CardContent, Chip, Box } from '@mui/material';
 import { useNavigate } from 'react-router-dom';
 
-const ProjectCard = ({ id, image, name, summary }) => {
+const ProjectCard = ({ id, image, name, summary, languages, tools }) => {
     const navigate = useNavigate();
     
     return (
@@ -29,11 +29,23 @@ const ProjectCard = ({ id, image, name, summary }) => {
               backgroundColor: 'rgba(0, 0, 0, 0.6)',
               color: 'white',
               width: '100%',
+              height: '100%',
+              padding: 2,
+              boxSizing: 'border-box',
+              overflow: 'hidden',
+              alignItems: 'center',
+              textAlign: 'center'
             }}
           >
             <Typography variant="body2" component="p">
               {summary}
             </Typography>
+            <Typography variant="body2" component="p" sx={{ padding: 1 }}>
+              {languages}
+            </Typography>
+            <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 1, justifyContent: 'center' }}>
+              {tools.map((tool, index) => <Chip key={index} label={tool} color='primary' sx={{ margin: 0.5 }}/>)}
+            </Box>
           </CardContent>
         </CardActionArea>
         <CardContent>
