@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import './ImageCarousel.css'
+import { Box, Button, IconButton } from '@mui/material';
+import { ArrowBackIos, ArrowForwardIos } from '@mui/icons-material';
 
 const ImageCarousel = ({ images, autoPlay = true, autoPlayInterval = 3000 }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -29,13 +30,52 @@ const ImageCarousel = ({ images, autoPlay = true, autoPlayInterval = 3000 }) => 
   }, [autoPlay, autoPlayInterval, currentIndex]);
 
   return (
-    <div className="carousel">
-      <img src={images[currentIndex]} alt={`Slide ${currentIndex}`} />
-      <div className="carousel-controls">
-        <button onClick={goToPrevious}>Previous</button>
-        <button onClick={goToNext}>Next</button>
-      </div>
-    </div>
+    <Box 
+      sx={{ 
+        position: 'relative', 
+        width: '100%', 
+        height: '400px', // Adjust as needed
+        display: 'flex', 
+        alignItems: 'center', 
+        justifyContent: 'center',
+        overflow: 'hidden',
+      }}
+    >
+      <img 
+        src={images[currentIndex]} 
+        alt={`Slide ${currentIndex}`} 
+        style={{ 
+          width: '100%', 
+          height: '100%', 
+          objectFit: 'cover', 
+          borderRadius: 8 
+        }} 
+      />
+      <Box 
+        sx={{ 
+          position: 'absolute', 
+          top: '50%', 
+          left: '16px', 
+          transform: 'translateY(-50%)' 
+        }}
+      >
+        <IconButton onClick={goToPrevious}>
+          <ArrowBackIos />
+        </IconButton>
+      </Box>
+      <Box 
+        sx={{ 
+          position: 'absolute', 
+          top: '50%', 
+          right: '16px', 
+          transform: 'translateY(-50%)' 
+        }}
+      >
+        <IconButton onClick={goToNext}>
+          <ArrowForwardIos />
+        </IconButton>
+      </Box>
+    </Box>
   );
 };
 

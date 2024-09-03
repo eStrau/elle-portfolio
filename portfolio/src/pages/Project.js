@@ -7,7 +7,6 @@ import ImageCarousel from '../components/ImageCarousel';
 
 import { ProjectData } from '../data/ProjectData2';
 import backgroundImg from '../images/backgroundImage.jpg';
-import GitHubIcon from '@mui/icons-material/GitHub';
 
 const Project = () => {
   // constant variables
@@ -45,7 +44,7 @@ const Project = () => {
           <Grid2 container spacing={8}>
             <Grid2 size={{xs: 12, md: 8}} >
               <Box sx={{display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center'}}>
-                <img src={project.images[1]} style={{height: '80%', width: '80%', justifyItems: 'center', display: 'flex'}}/>
+                <ImageCarousel images={project.images} autoPlayInterval={15000}/>
                 <Box sx={{textAlign: 'center', paddingTop: 4}}>
                   {project.description}
                 </Box>
